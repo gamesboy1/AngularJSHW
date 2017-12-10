@@ -2,7 +2,34 @@
 <div class="jumbotron">
   <div class="container">
     <div  style="color: darkblue" class="row justify-content-center" >
-      <div  style="color: darkblue" class="col-md-6" >
+      <div  style="color: darkblue" class="col-md-6">
+
+          <form (submit)="addAccount()">
+            <fieldset>
+              <div align="center">
+              <legend style="color: darkblue; font-size: 40px "><b>Register</b></legend>
+              </div>
+              <hr>
+              <div class="form-group" >
+                <label style="color: darkblue" for="accountNumber">Account number</label>
+                <input  type="text" class="form-control" id="accountNumber" name="accountNumber" [(ngModel)] = "accountNumber" aria-describedby="emailHelp" placeholder="Enter Account number">
+              </div>
+              <div class="form-group">
+                <label style="color: darkblue" for="Branch_name">Branch name</label>
+                <input type="text" class="form-control" id="branchName" name="branchName" [(ngModel)] = "branchName" placeholder="Enter Branch name">
+              </div>
+              <div class="form-group" >
+                <label style="color: darkblue" for="Balance">Balance</label>
+                <input type="text" class="form-control" id="balance" name="balance" [(ngModel)] = "balance" placeholder="Enter Balance">
+              </div>
+              <div class="form-group" align="center">
+                <button style="background-color: deepskyblue; color: darkblue; width: 200px" type="submit" class="btn btn-primary" >บันทึก</button>
+
+              </div>
+
+            </fieldset>
+          </form>
+
         <table class="table table-striped table-hover table-bordered table-responsive">
           <thead class="thead-dark text-center">
           <tr>
@@ -31,7 +58,7 @@
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 style="color: darkblue" class="modal-title">แก้ไขข้อมูล</h5>
+                      <h5 style="color: darkorange" class="modal-title">แก้ไขข้อมูล</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -66,7 +93,7 @@
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 style="color: darkblue" class="modal-title">ลบข้อมูล</h5>
+                      <h5 style="color: maroon" class="modal-title">ลบข้อมูล</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -87,34 +114,6 @@
           </tbody>
         </table>
       </div>
-
-
-      <div class="col-md-5" >
-        <form (submit)="addAccount()">
-          <fieldset>
-            <legend style="color: seagreen ">เพิ่มข้อมูล</legend>
-            <div class="form-group" >
-              <label style="color: lightsalmon" for="accountNumber">account_number</label>
-              <input  type="text" class="form-control" id="accountNumber" name="accountNumber" [(ngModel)] = "accountNumber" aria-describedby="emailHelp" placeholder="Enter Account number">
-            </div>
-            <div class="form-group">
-              <label style="color: lightsalmon" for="Branch_name">Branch_name</label>
-              <input type="text" class="form-control" id="branchName" name="branchName" [(ngModel)] = "branchName" placeholder="Enter Branch name">
-            </div>
-            <div class="form-group">
-              <label style="color: lightsalmon" for="Balance">Balance</label>
-              <input type="text" class="form-control" id="balance" name="balance" [(ngModel)] = "balance" placeholder="Enter Balance">
-            </div>
-            <div class="form-group">
-              <button style="background-color: darksalmon" type="submit" class="btn btn-primary"  >บันทึก</button>
-
-            </div>
-
-          </fieldset>
-        </form>
-      </div>
-
-
     </div>
   </div>
 
